@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      SQlite
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="font-weight: bold; text-align: center;">Crear Usuario</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+        <ion-item>
+        <ion-input label="Rut:" type="text" [(ngModel)]="rut" name="rut"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Email:" type="text" [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Password:" type="password" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+      <div style="text-align: center; margin-top: 15px;">
+        <ion-button (click)="create()">
+          Crear Usuario
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="font-weight: bold; text-align: center;">Ver Usuarios</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let usuario of usuarios" style="margin-bottom: 5px;">
+          <p>
+            <ion-label> Rut:  {{usuario.id}}</ion-label>
+            <ion-label>Email: {{usuario.email}}
+            </ion-label>          
+          </p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

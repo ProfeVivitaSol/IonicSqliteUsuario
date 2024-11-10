@@ -1,0 +1,16 @@
+{
+    "database": "basedatos.db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+        {
+            "name": "usuarios",
+            "schema": [
+                {"column": "rut", "value": "TEXT PRIMARY KEY"},
+                {"column": "email", "value": "TEXT NOT NULL"},
+                {"column": "password", "value": "TEXT NOT NULL"}
+            ]
+        }
+    ]
+}
